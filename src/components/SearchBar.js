@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function SearchBar() {
+function SearchBar(props) {
 
     const [text, setText] = useState("");
 
@@ -11,7 +11,8 @@ function SearchBar() {
 
     function onFormSubmit(event){
         event.preventDefault();
-        console.log(text);
+        // console.log(text);
+        props.onSubmit(text);
     }
     
   return (
@@ -25,3 +26,8 @@ function SearchBar() {
 }
 
 export default SearchBar
+
+
+
+// ACCESS KEY = obMQOve0Rnuc6i6q1jm40DYIMPtjy-XHCni96w0dKxQ
+// SECRET KEY = ip7MbMVtMeTSuYivU_xTHXEhaIVOVF52BW5ixyV3dis
