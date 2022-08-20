@@ -1,5 +1,7 @@
 import React,{useState} from 'react';
 import SearchBar from './SearchBar';
+import ImageList from './ImageList';
+
 import Axios from 'axios';
 
 function App() {
@@ -24,7 +26,7 @@ function App() {
   return (
     <div>
       <SearchBar onSubmit={onSearchSubmit}/>
-      Found : {images.length} images
+      <ImageList images={images} />
     </div>
   )
 }
